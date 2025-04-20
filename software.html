@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Projects - Hasindu Sanahas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.3/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans flex flex-col min-h-screen">
+    <header x-data="{ isOpen: false }" class="bg-blue-600 text-white">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="text-xl font-semibold">
+                    <a href="index.html">Hasindu Sanahas</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="index.html" class="mx-3 hover:text-blue-200">Home</a>
+                    <a href="about.html" class="mx-3 hover:text-blue-200">About</a>
+                    <a href="poems.html" class="mx-3 hover:text-blue-200">Poems</a>
+                    <a href="software.html" class="mx-3 hover:text-blue-200">Software</a>
+                    <a href="music.html" class="mx-3 hover:text-blue-200">Music</a>
+                    <a href="contact.html" class="mx-3 hover:text-blue-200">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button @click="isOpen = !isOpen" type="button" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path x-show="!isOpen" fill-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"></path>
+                            <path x-show="isOpen" fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div x-show="isOpen" class="md:hidden mt-3">
+                <a href="index.html" class="block py-2 hover:text-blue-200">Home</a>
+                <a href="about.html" class="block py-2 hover:text-blue-200">About</a>
+                <a href="poems.html" class="block py-2 hover:text-blue-200">Poems</a>
+                <a href="software.html" class="block py-2 hover:text-blue-200">Software</a>
+                <a href="music.html" class="block py-2 hover:text-blue-200">Music</a>
+                <a href="contact.html" class="block py-2 hover:text-blue-200">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-8 flex-grow">
+        <h1 class="text-4xl font-bold text-center mb-8">My Software Projects</h1>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white shadow-md rounded px-8 pt-6 pb-8">
+                <h2 class="text-2xl font-bold mb-4">PoetryAI</h2>
+                <img src="/api/placeholder/400/200" alt="PoetryAI Screenshot" class="w-full rounded-lg mb-4">
+                <p class="mb-4">An AI-powered poetry generator that creates unique verses based on given themes or emotions. This project combines natural language processing with creative writing techniques.</p>
+                <div class="flex items-center mb-4">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Python</span>
+                    <span class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">TensorFlow</span>
+                    <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Flask</span>
+                </div>
+                <a href="#" class="text-blue-500 hover:text-blue-700 font-semibold">
+                    <i class="fab fa-github mr-2"></i>View on GitHub
+                </a>
+            </div>
+            
+            <div class="bg-white shadow-md rounded px-8 pt-6 pb-8">
+                <h2 class="text-2xl font-bold mb-4">MusicViz</h2>
+                <img src="/api/placeholder/400/200" alt="MusicViz Screenshot" class="w-full rounded-lg mb-4">
+                <p class="mb-4">A web application that creates real-time visualizations of music, transforming sound into captivating visual art. This project explores the intersection of audio processing and graphics programming.</p>
+                <div class="flex items-center mb-4">
+                    <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">JavaScript</span>
+                    <span class="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Web Audio API</span>
+                    <span class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Three.js</span>
+                </div>
+                <a href="#" class="text-blue-500 hover:text-blue-700 font-semibold">
+                    <i class="fab fa-github mr-2"></i>View on GitHub
+                </a>
+            </div>
+            
+            <div class="bg-white shadow-md rounded px-8 pt-6 pb-8">
+                <h2 class="text-2xl font-bold mb-4">CodeBard</h2>
+                <img src="/api/placeholder/400/200" alt="CodeBard Screenshot" class="w-full rounded-lg mb-4">
+                <p class="mb-4">An innovative IDE that allows developers to write code in natural language, blending programming with creative writing. This project pushes the boundaries of human-computer interaction in software development.</p>
+                <div class="flex items-center mb-4">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">React</span>
+                    <span class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Node.js</span>
+                    <span class="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">OpenAI API</span>
+                </div>
+                <a href="#" class="text-blue-500 hover:text-blue-700 font-semibold">
+                    <i class="fab fa-github mr-2"></i>View on GitHub
+                </a>
+            </div>
+            
+            <div class="bg-white shadow-md rounded px-8 pt-6 pb-8">
+                <h2 class="text-2xl font-bold mb-4">EcoTrack</h2>
+                <img src="/api/placeholder/400/200" alt="EcoTrack Screenshot" class="w-full rounded-lg mb-4">
+                <p class="mb-4">A mobile app that helps users track and reduce their carbon footprint through daily lifestyle choices. This project combines environmental science with mobile app development.</p>
+                <div class="flex items-center mb-4">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">React Native</span>
+                    <span class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Firebase</span>
+                    <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Expo</span>
+                </div>
+                <a href="#" class="text-blue-500 hover:text-blue-700 font-semibold">
+                    <i class="fab fa-github mr-2"></i>View on GitHub
+                </a>
+            </div>
+        </div>
+        
+        <div class="mt-12 text-center">
+            <h3 class="text-2xl font-bold mb-4">Want to Collaborate?</h3>
+            <p class="mb-6">I'm always open to new projects and collaborations. If you have an idea or want to work together, let's chat!</p>
+            <a href="contact.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Get in Touch</a>
+        </div>
+    </main>
+
+    <footer class="bg-blue-600 text-white py-4 mt-auto">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Hasindu Sanahas - All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
